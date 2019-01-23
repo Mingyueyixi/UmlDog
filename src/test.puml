@@ -1,0 +1,32 @@
+@startuml
+start
+:查看问题;
+repeat
+:分析问题;
+:修改代码;
+:加入Changelist;
+:Changelist Commit;
+if(PLM or MITS问题?) then (yes)
+:查找问题单号SAST-XXX;
+:填写Commit Message:xxx [SAST-XXX];
+note left
+格式
+简述修改，空一格加上问题单号
+end note
+else(no)
+:填写Commit Message：xxx [SAST-999];
+note right
+格式
+简述修改，空一格加上[SAST-999]
+end note
+endif
+:commit and push;
+:QB 自动 build apk;
+repeat while (测试pass?)
+:code review;
+note left
+发送gerrit链接
+end note
+:关闭问题或得出结论;
+end
+@enduml
