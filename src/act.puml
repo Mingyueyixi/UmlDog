@@ -1,0 +1,11 @@
+@startuml
+start
+
+while(!end )
+:read data;
+:generate diagrams;
+endwhile
+:close stream;
+
+stop
+@enduml
