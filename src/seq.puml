@@ -1,4 +1,5 @@
 @startuml
+scale 1.5
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 hehe -> Alice: 尼玛的

@@ -1,4 +1,5 @@
 @startuml
+scale 1.5
 start
 :查看问题;
 repeat
